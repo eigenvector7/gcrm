@@ -14,7 +14,7 @@ class NewSessionTest(unittest.TestCase):
         # Jayne is Introduced to the new CRM which exists at an address
         self.browser.get("http://localhost:8000")
         # She notices the page title and header mention to-do lists
-        self.assertIn('To-Do', self.browser.title)
+        self.assertIn('G-CRM', self.browser.title)
         self.fail('Finish the test!')
 
         # She is invited to enter a new client information right away
