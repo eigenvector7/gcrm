@@ -22,10 +22,10 @@ class NewSessionTest(unittest.TestCase):
 
 
         # She is invited to enter a new client information right away
-        inputbox = self.browser.find_element_by_id('id_new_client')
+        inputbox = self.browser.find_element_by_id('id_new_item')
 
         self.assertEqual(inputbox.get_attribute('placeholder'),
-                         'Enter a new client information'
+                         'Enter a new item'
         )
 
 
@@ -35,7 +35,7 @@ class NewSessionTest(unittest.TestCase):
         # She fills in the form presented with the information
         inputbox.send_keys('John Doe')
         # When she hits enter, the page updates, and now the page lists
-        inputbox.send_keys(keys.Enter)
+        inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
         # <Client 1 Persona> <Status> <Notes> <Last Commmunication> <Next Step>
         table = self.browser.find_element_by_id('id_list_table')
